@@ -1,0 +1,19 @@
+{
+  "htmlElements": {
+    "tags": [
+      "body",
+      "div",
+      "head",
+      "html",
+      "link",
+      "main",
+      "script"
+    ],
+    "classes": [
+      "main"
+    ],
+    "ids": [
+      "page"
+    ]
+  }
+}
