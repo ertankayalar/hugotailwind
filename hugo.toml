@@ -2,4 +2,6 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 [build]
-  writeStats = true
+  [[build.cachebusters]]
+    source = 'layouts/.*'
+    target = 'css'

@@ -1,16 +1,26 @@
 {
   "htmlElements": {
     "tags": [
+      "article",
       "body",
       "div",
       "head",
       "html",
       "link",
       "main",
+      "meta",
       "script"
     ],
     "classes": [
-      "main"
+      "bg-gray-200",
+      "bg-gray-300",
+      "font-bold",
+      "main",
+      "text-blue-600",
+      "text-lg",
+      "text-red-600",
+      "text-xl",
+      "w-full"
     ],
     "ids": [
       "page"

@@ -499,3 +499,14 @@ video {
 [hidden] {
   display: none;
 }
+.block {
+  display: block;
+}
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}

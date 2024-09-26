@@ -1,21 +1,4 @@
-
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-
-
-
-  
-  
-    
-      <link rel="stylesheet" href="/css/main.css">
-    
-  
-
-  </head>
-  <body>
-	<div id="page">
-    <nav class="bg-gray-800 text-white">
+<nav class="bg-gray-800 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
             <div class="flex items-center">
@@ -136,14 +119,14 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        
+        // Close mobile menu when clicking outside
         document.addEventListener('click', (event) => {
             if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
                 mobileMenu.classList.add('hidden');
             }
         });
 
-        
+        // Mobile dropdown toggle
         const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
         mobileDropdownToggles.forEach(toggle => {
             toggle.addEventListener('click', (event) => {
@@ -153,7 +136,7 @@
             });
         });
 
-        
+        // Close mobile menu when clicking on a menu item
         const mobileMenuItems = mobileMenu.querySelectorAll('a');
         mobileMenuItems.forEach(item => {
             item.addEventListener('click', () => {
@@ -161,7 +144,7 @@
             });
         });
 
-        
+        // Desktop dropdowns
         const dropdownContainers = document.querySelectorAll('.mega-dropdown-container, .dropdown-container');
         dropdownContainers.forEach(container => {
             const button = container.querySelector('button');
@@ -193,11 +176,3 @@
         });
     });
 </script>
-  <main class="main">
-  
-<article>hello</article>
-
-  </main>
-  </div>    
-  </body>
-</html>

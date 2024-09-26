@@ -1,14 +1,29 @@
 
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "en" }}">
+<html lang="en" dir="ltr">
   <head>
-{{ with resources.Get "css/main.css" | postCSS }}
+{{/*  {{ with resources.Get "css/main.css" | postCSS }}
   <link rel="stylesheet" href="{{ .RelPermalink }}">
+{{ end }}  */}}
+
+{{ with resources.Get "css/main.css" }}
+  {{ $opts := dict "minify" true }}
+  {{ with . | css.TailwindCSS $opts }}
+    {{ if hugo.IsDevelopment }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{ else }}
+      {{ with . | fingerprint }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      {{ end }}
+    {{ end }}
+  {{ end }}
 {{ end }}
   </head>
   <body>
 	<div id="page">
+    {{ partial "shared/navbar.html" . }}
   <main class="main">
+  {{ block "main" . }}{{ end }}
   </main>
   </div>    
   </body>
